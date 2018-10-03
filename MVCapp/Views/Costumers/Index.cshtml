@@ -1,0 +1,12 @@
+﻿@model List<MVCapp.Models.Costumer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Costumers</h2>
+
+@foreach (var costumer in Model)
+{
+    <li>@Html.ActionLink(costumer.Name, "Details", "Costumers", new { id = costumer.Id }, null)</li>
+}
+
